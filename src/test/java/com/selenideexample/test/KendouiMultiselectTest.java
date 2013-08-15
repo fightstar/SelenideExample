@@ -19,6 +19,7 @@ public class KendouiMultiselectTest extends AbstractTest {
         kendouiMultiselectPage.clickSendInvitationBtn();
         //home
         System.out.println("home");
+        System.out.println("work");
     }
     @Override
     protected String getUrl(){
