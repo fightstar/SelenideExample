@@ -17,7 +17,8 @@ public class KendouiMultiselectTest extends AbstractTest {
         kendouiMultiselectPage.chooseRequiredByFullName("Nancy Davolio");
         kendouiMultiselectPage.deleneChoosenByFullName("Andrew Fuller");
         kendouiMultiselectPage.clickSendInvitationBtn();
-
+        //home
+        System.out.println("home");
     }
     @Override
     protected String getUrl(){
