@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class BasicAjaxTest extends AbstractTest {
     @Test
     public void verifyBasicAjax() {
-        BasicAjaxPage basicAjaxPage = new BasicAjaxPage(getWebdriver());
+        BasicAjaxPage basicAjaxPage = new BasicAjaxPage(getWebDriver());
 
         basicAjaxPage.chooseJava("Server","Cobol","1");
 

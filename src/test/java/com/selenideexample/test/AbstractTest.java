@@ -4,7 +4,9 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,21 +17,22 @@ import org.testng.annotations.BeforeMethod;
  */
 public class AbstractTest   {
     private WebDriver driver;
-    public WebDriver getWebdriver() {
-        if (driver == null){
-        driver = new FirefoxDriver();
-        }
+
+    public WebDriver getWebDriver() {
         return driver;
     }
-
-    @BeforeMethod
+    @BeforeClass
     public void SetUp(){
-
-        WebDriverRunner.setWebDriver(getWebdriver());
+        System.out.println("webdriver init");
+        driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebDriverRunner.setWebDriver(driver);
         Configuration.timeout = 4000;
         //getWebdriver().get("http://compendiumdev.co.uk/selenium" + getUrl());
-        getWebdriver().get("http://demos.kendoui.com/"+getUrl());
+        driver.get("http://demos.kendoui.com/" + getUrl());
     }
+
     protected String getUrl(){
         return "/";
     }

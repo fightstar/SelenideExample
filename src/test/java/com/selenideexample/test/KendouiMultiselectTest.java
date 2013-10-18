@@ -13,13 +13,13 @@ import org.testng.annotations.Test;
 public class KendouiMultiselectTest extends AbstractTest {
     @Test
     public void verifyMultiSelect() {
-        KendouiMultiselectPage kendouiMultiselectPage = new KendouiMultiselectPage(getWebdriver());
+        KendouiMultiselectPage kendouiMultiselectPage = new KendouiMultiselectPage(getWebDriver());
         kendouiMultiselectPage.chooseRequiredByFullName("Nancy Davolio");
-        kendouiMultiselectPage.deleneChoosenByFullName("Andrew Fuller");
+        kendouiMultiselectPage.deleteChoosenByFullName("Andrew Fuller");
         kendouiMultiselectPage.clickSendInvitationBtn();
         //home
-        System.out.println("home");
-        System.out.println("work");
+
+
     }
     @Override
     protected String getUrl(){

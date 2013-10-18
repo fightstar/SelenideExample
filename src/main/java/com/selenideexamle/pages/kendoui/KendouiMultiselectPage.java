@@ -34,7 +34,7 @@ public class KendouiMultiselectPage extends BasePage {
         multiSelectOptional.click();
         element.click();
     }
-    public void deleneChoosenByFullName(String fullName){
+    public void deleteChoosenByFullName(String fullName){
         SelenideElement element
                 = $(By.xpath("//ul[@id = 'required_taglist']/li/span[contains(text(), '" + fullName + "')]/following-sibling::span"));
         element.click();

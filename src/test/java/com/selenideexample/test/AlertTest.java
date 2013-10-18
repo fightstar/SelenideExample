@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class AlertTest extends AbstractTest {
     @Test
     public void verifyAlert() {
-        AlertPage alertPage  = new AlertPage(getWebdriver());
+        AlertPage alertPage  = new AlertPage(getWebDriver());
         alertPage.clickShowAlertBoxPageBtn();
 
     }
